@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gemini Assist</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 10px; }
+    #setup, #main { display: none; }
+    label, input, button { display: block; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+    <!-- API Key Setup UI -->
+    <div id="setup">
+        <h1 class="gradient">Looks like you don't have an API key set up to use Gemini</h1>
+        <label for="apiKey">Enter your Google API Key:</label>
+        <input type="text" id="apiKey" placeholder="Your API Key" />
+        <button id="saveKey">Save Key</button>
+        <section id="instructions">
+            <h2 class="gradient">How to Get Your Free Google API Key</h2>
+            <p>Follow these steps to obtain your free Google API key for use with this extension:</p>
+            <ol>
+                <li>
+                    <p>Open the Google AI Studio:
+                    <em><a href="https://aistudio.google.com/app/apikey" target="_blank">Click here to visit the Google AI Studio</a></em>.</p> 
+                </li>
+                <li>
+                    <p>Log in to your Google account, if not already logged in.</p>
+                </li>
+                <li>
+                    <p>Once on the AI Studio page, locate and click the button labeled <em>"Create API Key"</em>.</p>
+                </li>
+                <li>
+                    <p>Copy the API key after it is generated.</p>
+                </li>
+                <li>
+                    <p>Paste the key above and click on "Save Key" to store it.</p>
+                </li>
+            </ol>
+        </section>
+    </div>
+
+  <!-- Main Functionality UI -->
+  <div id="main">
+    <h1 class="gradient">How may I help you?</h1>
+    <input type="text" id="userQuery" placeholder="Enter your query" />
+    <button id="submitQuery">Submit</button>
+    <p id="response"></p>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
